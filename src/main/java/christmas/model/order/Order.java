@@ -24,7 +24,7 @@ public class Order {
     }
 
     public void validator() {
-        if (menu == Menu.Empty || count < Constants.MIN_MENU_COUNT) {
+        if (count < Constants.MIN_MENU_COUNT) {
             throw new MenuException();
         }
     }
