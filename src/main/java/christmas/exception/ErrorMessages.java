@@ -10,6 +10,6 @@ public enum ErrorMessages {
     }
 
     public String getMessage() {
-        return "[ERROR]" + message + " 다시 입력해 주세요.";
+        return "[ERROR] " + message + " 다시 입력해 주세요.";
     }
 }

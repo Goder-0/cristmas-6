@@ -11,7 +11,16 @@ public class Constants {
     public static final int PRESENT_PRICE = 120000;
     public static final int MIN_PRICE = 10000;
     public static final int THIS_YEAR = 2023;
-    public static LocalDate EVENT_DATE_START = LocalDate.of(2023, 12, 1);
-    public static LocalDate EVENT_DATE_END = LocalDate.of(2024, 1, 1);
     public static LocalDate EVENT_CHRISTMAS_DATE_END = LocalDate.of(2023, 12, 26);
+    public static String VIEW_BENEFIT_DETAIL = "/benefit/detail";
+    public static String VIEW_EXPECT_PRICE = "/expect";
+    public static String VIEW_ORDER_DETAIL = "/order/detail";
+    public static String VIEW_PRESENT = "/present";
+    public static String VIEW_TOTAL_BENEFIT = "/benefit";
+    public static String VIEW_TOTAL_PRICE = "/price";
+    public static String VIEW_BADGE = "/badge";
+    public static String VIEW_DATE = "/date";
+    public static String VIEW_ORDER = "/order";
+
+
 }

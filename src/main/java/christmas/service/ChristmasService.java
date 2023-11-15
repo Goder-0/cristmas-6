@@ -15,8 +15,8 @@ import java.util.List;
 import java.util.Optional;
 
 public class ChristmasService {
-    private List<Benefit> benefits = new ArrayList<>();
-    private List<Order> orders;
+    private final List<Benefit> benefits = new ArrayList<>();
+    private final List<Order> orders;
     private LocalDate date;
     private long totalPrice = 0;
     private long totalBenefitPrice = 0;
@@ -53,7 +53,7 @@ public class ChristmasService {
         benefits.removeIf(benefit -> !benefit.isAble(date, orders));
     }
 
-    public Long calculateBenefit() {
+    public Long calculateBenefitPrice() {
         removeBenefits();
         totalBenefitPrice = 0L;
         for (Benefit benefit : benefits) {
@@ -63,8 +63,13 @@ public class ChristmasService {
         return -totalBenefitPrice;
     }
 
+    public List<Benefit> getBenefits() {
+        calculateBenefitPrice();
+        return benefits;
+    }
+
     public Long calculateExpectedPrice() {
-        calculateBenefit();
+        calculateBenefitPrice();
         return totalPrice + present.getPrice() - totalBenefitPrice;
     }
 
@@ -83,5 +88,9 @@ public class ChristmasService {
 
     public Long getTotalPrice() {
         return totalPrice;
+    }
+
+    public List<Order> getOrders() {
+        return orders;
     }
 }

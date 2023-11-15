@@ -1,7 +1,5 @@
 package christmas.service;
 
-import static org.junit.jupiter.api.Assertions.*;
-
 import christmas.model.badge.Badge;
 import christmas.model.menu.Menu;
 import christmas.model.order.Order;
@@ -41,7 +39,7 @@ class ChristmasServiceTest {
     void calculateBenefit() {
         christmasService.selectPurchaseDate(date);
         christmasService.orderMenus(orders);
-        Long benefit = christmasService.calculateBenefit();
+        Long benefit = christmasService.calculateBenefitPrice();
         Assertions.assertThat(benefit).isEqualTo(-29400);
     }
 
