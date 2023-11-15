@@ -31,7 +31,7 @@ public class Order {
 
     public String toString() {
         if (menu != Menu.Empty) {
-            return menu.getName() + " " + count + "개";
+            return String.format("%s %d개", menu.getName(), count);
         }
         return menu.getName();
     }
